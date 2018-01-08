@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form name="uploadForm" id="uploadForm" method="post" enctype="multipart/form-data" action="{:Url('AddPost')}">
+
+    <p style="margin:10px 0;">上传excel表格: &nbsp;&nbsp;
+        <input type="file" name="excelname" ID="fupPhoto"/>
+        <input type="submit" id="fileSubmit" name="Submit" value="上传" />
+        <iframe name="uploadFrame" id="uploadFrame" style="display:none;"></iframe>
+    </p>
+</form>
+
+<img id="imgPhoto" src="" width="300">
+</body>
+</html>

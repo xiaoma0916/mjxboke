@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小巷青砖的博客</title>
+<meta name="keywords" content="个人博客" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="__PUBLIC__/css/index.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+ <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="__PUBLIC__/js/html5.js"></script>
+</head>
+{include file="/index/header"}
+<body id="botAgregar">
+       <!--nav end-->
+    <!--content start-->
+    <div id="content">
+         <!--left-->
+         <div class="left" id="c_left">
+           <div class="s_tuijian">
+           <h2>文章<span>推荐</span></h2>
+           </div>
+             <div class="content_text">
+                 <div class="wz">
+                     <h3><a href="#" title=""></a>{$data.0.title}<span style="color:red;font-size: 8px;">火</span></h3>
+                     <dl>
+                         <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
+                         <dd>
+                             <p class="dd_text_1">人生的轻松，就是能在这个喧嚣的尘世，不用献媚于谁，也不必跟谁说讨好的话，他玩他的，你活你的。两不相干，然后，两相安。你在意谁，在意到极致，就会活在这个人的阴影里...</p>
+                             <p class="dd_text_2">
+                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
+                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.0.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.0.id)))}" title="阅读全文">阅读全文</a>
+               </span>
+                             <div class="clear"></div>
+                             </p>
+                         </dd>
+                         <div class="clear"></div>
+                     </dl>
+                 </div>
+                 <!--wz-->
+                 <div class="wz">
+                     <h3><a href="#" title=""></a>{$data.1.title}</h3>
+                     <dl>
+                         <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
+                         <dd>
+                             <p class="dd_text_1">镜中人，相当于情人眼里的意中人。
+                                 谁不爱自己？谁不把自己作为最知心的人？谁不体贴自己、谅解自己？.....</p>
+                             <p class="dd_text_2">
+                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
+                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.1.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.1.id)))}" title="阅读全文">阅读全文</a>
+               </span>
+                             <div class="clear"></div>
+                             </p>
+                         </dd>
+                         <div class="clear"></div>
+                     </dl>
+                 </div>
+                 <!--wz end-->
+                 <!--wz-->
+                 <div class="wz">
+                 <h3><a href="#" title=""></a>{$data.2.title}</h3>
+                 <dl>
+                     <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
+                     <dd>
+                         <p class="dd_text_1">其实很多人在交往谈话的过程当中，总是会无意识中犯一些错误，而这些错误，也是影响到别人对你印象的关键，因此在与人谈话中，你必须改掉一些坏毛病。那么，与人交谈要注意哪些问题呢?.....</p>
+                         <p class="dd_text_2">
+                             <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
+                             <span class="left fl">分类:<a href="#" title="学无止境">{$data.2.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.jiami($data.2.id))}" title="阅读全文">阅读全文</a>
+               </span>
+                         <div class="clear"></div>
+                         </p>
+                     </dd>
+                     <div class="clear"></div>
+                 </dl>
+             </div>
+                 <!--wz end-->
+
+             </div>
+
+         </div>
+         <!--left end-->
+         <!--right-->         
+         <div class="right" id="c_right">
+          <div class="s_about">
+          <h2>关于博主</h2>
+           <img src="/static/img/1.jpg" width="230" height="230" alt="博主"/>
+           <p>博主:小巷青砖</p>
+           <p>简介:小巷是一个自制力很差的人,审美有点问题。请大家多多指教！</p>
+           <p>
+           <a href="#" title="联系博主"><span class="left b_1"></span></a><a href="#" title="加入QQ群，一起学习！"><span class="left b_2"></span></a>
+           <div class="clear"></div>
+           </p>
+          </div>
+          <!--栏目分类-->
+           <div class="lanmubox">
+              <div class="hd">
+               <ul><li>精心推荐</li>
+              </div>
+              <div class="bd">
+                 <ul>
+                     {volist name="data" id="vo"}
+					<li><a href="{:Url('article_editpost','id='.($vo.id))}" title="网站项目实战开发（-）">{$vo.title}</a></li>
+                    {/volist}
+				</ul>
+              </div>
+           </div>
+           <!--end-->
+           <div class="link">
+            <h2>幽默笑话</h2>
+            <p><a href="" ></a></p>
+           </div>
+         </div>
+         <!--right end-->
+         <div class="clear"></div>
+    </div>
+    <!--content end-->
+    <!--footer start-->
+    <div id="footer">
+     <p>Design by:<a href="#" target="_blank">小巷青砖</a> 2016-11-03</p>
+    </div>
+    <!--footer end-->
+    <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+    <script  type="text/javascript" src="__PUBLIC__/js/nav.js"></script>
+</body>
+</html>
