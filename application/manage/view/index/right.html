@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv=content-type content="text/html; charset=utf-8" />
+        <link href="__PUBLIC__/manage/css/admin.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" language="javascript">
+function show_cur_times(){
+//获取当前日期
+ var date_time = new Date();
+ //定义星期
+ var week;
+ //switch判断
+ switch (date_time.getDay()){
+     case 1: week="星期一"; break;
+     case 2: week="星期二"; break;
+     case 3: week="星期三"; break;
+     case 4: week="星期四"; break;
+     case 5: week="星期五"; break;
+     case 6: week="星期六"; break;
+     default:week="星期天"; break;
+ }
+  
+ //年
+ var year = date_time.getFullYear();
+    //判断小于10，前面补0
+   if(year<10){
+    year="0"+year;
+ }
+  
+ //月
+ var month = date_time.getMonth()+1;
+    //判断小于10，前面补0
+  if(month<10){
+     month="0"+month;
+ }
+  
+ //日
+ var day = date_time.getDate();
+    //判断小于10，前面补0
+   if(day<10){
+    day="0"+day;
+ }
+  
+ //时
+ var hours =date_time.getHours();
+    //判断小于10，前面补0
+    if(hours<10){
+    hours="0"+hours;
+ }
+  
+ //分
+ var minutes =date_time.getMinutes();
+    //判断小于10，前面补0
+    if(minutes<10){
+    minutes="0"+minutes;
+ }
+  
+ //秒
+ var seconds=date_time.getSeconds();
+    //判断小于10，前面补0
+    if(seconds<10){
+    seconds="0"+seconds;
+ }
+  
+ //拼接年月日时分秒
+ var date_str = year+"年"+month+"月"+day+"日 "+hours+":"+minutes+":"+seconds+" "+week;
+  
+ //显示在id为showtimes的容器里
+ document.getElementById("showtimes").innerHTML= date_str;
+ 
+}
+  
+ //设置1秒调用一次show_cur_times函数
+setInterval("show_cur_times()",100);
+</script>
+    </head>
+    <body>
+        <table cellspacing=0 cellpadding=0 width="100%" align=center border=0>
+              <tr>
+                <td bgcolor=#b1ceef height=1></td></tr>
+            <tr height=20>
+                <td background=./img/shadow_bg.jpg></td></tr></table>
+        <table cellspacing=0 cellpadding=0 width="90%" align=center border=0>
+            <tr height=100>
+                <td align=middle width=100><img height=100 src="__PUBLIC__/manage/img/admin_p.gif"
+                                                width=90></td>
+                <td width=60>&nbsp;</td>
+                <td>
+                    <table height=100 cellspacing=0 cellpadding=0 width="100%" border=0>
+
+                        <tr>
+                            <td id="showtimes"></td></tr>
+                        <tr>
+                            <td style="font-weight: bold; font-size: 16px"></td></tr>
+                        <tr>
+                            <td>欢迎进入网站管理中心！</td></tr></table></td></tr>
+            <tr>
+                <td colspan=3 height=10></td></tr></table>
+        <table cellspacing=0 cellpadding=0 width="95%" align=center border=0>
+            <tr height=20>
+                <td></td></tr>
+            <tr height=22>
+                <td style="padding-left: 20px; font-weight: bold; color: #ffffff" 
+                    align=middle background="__PUBLIC__/img/title_bg2.jpg">您的相关信息</td></tr>
+            <tr bgcolor=#ecf4fc height=12>
+                <td></td></tr>
+            <tr height=20>
+                <td></td></tr></table>
+        <table cellspacing=0 cellpadding=2 width="95%" align=center border=0>
+            <tr>
+                <td align=right width=100>登陆帐号：{$Think.session.adminuser}</td>
+                <td style="color: #880000"></td></tr>
+            <tr>
+                <td align=right>真实姓名：{$Think.session.adminuser}</td>
+                <td style="color: #880000"></td></tr>
+            <tr>
+                <td align=right>注册时间：2013-09-16 09:09:16</td>
+                <td style="color: #880000"></td></tr>
+           
+        </table>		
+    </body>
+</html>

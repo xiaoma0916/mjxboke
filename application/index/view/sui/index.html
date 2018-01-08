@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>碎言碎语-个人博客</title>
+<meta name="keywords" content="个人博客" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="__PUBLIC__/css/index.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+<script type="text/javascript" src="__PUBLIC__/js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.SuperSlide.2.1.1.js"></script>
+<!--[if lt IE 9]>
+<script src="__PUBLIC__/Home/js/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+</script>
+<style type="text/css"> 
+.pageTable { float:left; width:740px; margin:0 0 20px 0; border:1px solid #EEE; border-top:none; border-collapse:collapse; background:#FFF;margin-left:25px; }
+.pageTable td { border:none; font-size:14px; font-weight:normal; color:#666; line-height:24px; padding:5px; }
+.pageTable td .Page { float:left; width:100%; height:24px; overflow:hidden; text-align:right; font-size:13px; font-weight:normal; color:#666; line-height:24px; }
+.pageTable td .Page a { height:24px; margin:3px 3px 0 3px; padding:0 5px; display:inline; overflow:hidden; font-size:13px; font-weight:normal; color:#99BF38; line-height:18px; }
+.pageTable td .Page a:hover { background:#99BF38; text-decoration:none; color:#FFF; }
+.pageTable td .Page input[type="text"] { margin:0 3px; width:30px; height:20px; text-align:center; font-size:13px; line-height:20px; color:#666; border:1px solid #CDCDCD; background:#FFF; }
+
+.pageStyle { border:none; background:none; }
+
+
+</style>
+<style type="text/css"></style>
+</head>
+{include file="/index/header"}
+<body>
+    <div id="say">
+     <div class="weizi">
+           <div class="wz_text">当前位置：<a href="{:Url('Index/index')}">首页</a>><h1>碎言碎语</h1></div>
+           </div>
+
+          <ul class="say_box">
+                     <div class="sy">
+                         <p> </p>
+                     </div>
+                  <span class="dateview"></span>
+          </ul>
+
+     </div>
+    <!--content end-->
+    <!--footer-->
+    <div id="footer">
+        <table class="pageTable">
+            <tr>
+                  <td><div class="Page"></div></td>
+            </tr>
+        </table> 
+    </div>
+   
+    <!--footer end-->
+    <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+    <script  type="text/javascript" src="__PUBLIC__/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style1.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+
+<div id="header" style="margin-top: 50px;">
+    <h1>小巷青砖博客</h1>
+    <p>青春是打开了,就合不上的书。人生是踏上了，就回不了头的路，爱情是扔出了，就收不回的赌注。亲情是拥有了，就放不下的牵挂。</p>
+</div>
+<!--header end-->
+<!--nav-->
+<div id="nav" style="margin:0 auto">
+    <ul >
+        <li><a href="{:Url('Index/index')}">首页</a></li>
+        <li><a href="{:Url('Me/index')}">学无止境</a></li>
+        <!--<li><a href="{:Url('Me/message')}">留言板</a></li>-->
+        <!--<li><a onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="{:Url('Login/chu')}">退出</a></li>-->
+        <div class="clear"></div>
+    </ul>
+    <script type="text/javascript">
+        $.AutomLeafStart({leafsfolder:"/static/img/yezi/",howmanyimgsare:8,initialleafs:30,maxYposition:-10,multiplyclick:true,multiplynumber:2,infinite:true,fallingsequence:1000});
+        $("#botAgregar").on("click",function(){$.AutomLeafAdd({leafsfolder:"/static/img/",add:8,})});
+    </script>
+</div>
+
+
+
+

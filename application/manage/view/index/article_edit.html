@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理界面</title>
+<link href="__PUBLIC__/manage/css/main.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/manage/js/kindeditor-4.1.10/themes/default/default.css" rel="stylesheet" type="text/css" />
+<script charset="utf-8" src="__PUBLIC__/manage/js/kindeditor-4.1.10/kindeditor-min.js"></script>
+<script charset="utf-8" src="__PUBLIC__/manage/js/kindeditor-4.1.10/lang/zh_CN.js"></script>
+<script>
+      KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+    </script>
+</head>
+<body id="page">
+    <div class="main">
+<form id="form1" name="form1" method="post" action="{:Url('article_editpost','id='.($data.id))}" enctype="multipart/form-data">
+  <table class="formTable">
+   <tr>
+    请选择类型：<select name="state" >
+       <option>请选择</option>
+      <option value="1" <?php if($data['state'] == 1) echo   'selected'?> >学无止境</option>
+      <option value="2" <?php if($data['state'] == 2) echo  'selected'?>>正能量</option>
+    </select>
+	
+    </tr>
+    <tr class="trBgA">
+      <td class="formTableTitle">标题</td>
+      <td><input name="title" type="text" id="title" size="50" value="{$data.title}"/></td>
+    </tr>
+	<tr class="trBgA">
+	<td class="formTableTitle">内容</td>
+      <td><textarea name="content" id="editor_id" style="width:98%;height:900px;" >{$data.content}</textarea></td>
+    </tr>
+    <tr class="trBgA">
+      <td colspan="2" align="center" >
+        <input class="submitGreen" value='修 改' type="submit">
+         <input class="submitGreen" value="重 置" type="reset">
+     </td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

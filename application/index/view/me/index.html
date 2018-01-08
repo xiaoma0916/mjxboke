@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小巷青砖博客</title>
+<meta name="keywords" content="个人博客" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="__PUBLIC__/css/index.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+<script type="text/javascript" src="__PUBLIC__/css/jquery1.42.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__css/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+<script  type="text/javascript" src="__PUBLIC__/js/nav.js"></script>
+<style>
+/*分页样式*/
+.pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}
+.pagination .active{background-color: #46A3FF;color: #fff;}
+.pagination .disabled{color:#aaa;}
+</style>
+</head>
+<body>
+<div id="pagelist">
+{include file="/Index/header"}   <!--header start-->
+       <!--nav end-->
+    <!--content start-->
+    <div id="content">
+       <!--left-->
+         <div class="left" id="learn">
+           <div class="weizi">
+           <div class="wz_text">当前位置：<a href="#">首页</a>><h1>学无止境</h1></div>
+           </div>
+           <div class="l_content">
+              <!--wz-->
+               {volist name="data" id="vo"}
+           <div class="wz">
+            <h3><a href="#" title=""></a>{$vo.title}</h3>
+             <dl>
+               <dt><img src="/static/img/s.jpg" width="200"  height="123" alt=""></dt>
+               <dd>
+                 <p class="dd_text_1">{$vo.content|clearHtml|cutstr_html|html_entity_decode|substring}...</p>
+               <p class="dd_text_2">
+               <span class="left author">段亮</span><span class="left sj">时间:2014-8-9</span>
+               <span class="left fl">分类:<a href="#" title="学无止境">学无止境</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.jiami($vo.id))}" title="阅读全文">阅读全文</a>
+               </span>
+                <div class="clear"></div>
+               </p>
+               </dd>
+               <div class="clear"></div>
+             </dl>
+            </div>
+               {/volist}
+           <!--wz end-->
+
+           </div>
+         </div>
+        <div class="pagination" >{$page}</div>
+
+        <!--end left -->
+         <!--right-->
+
+         <div class="clear"></div>
+
+    </div>
+    <!--content end-->
+    <!--footer-->
+    <div id="footer">
+     <p>Design by:少年 2014-8-9</p>
+    </div>
+    </div>
+<script>
+    $(function()
+    {
+        //绑定pagination a  Click事件
+        $(".pagination a").on("click", function() {
+            var page = $(this).attr("href");
+            getPage(page);
+            return false;
+            //禁止A标签跳转
+        }) ;
+
+    }) ;
+    function getPage(url)
+    {
+        $.get(url, function(result){
+            //使用jquery html 加载URL
+            $("#pagelist").html(result);
+        });
+
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="right" id="c_right">
+    <div class="s_about">
+        <h2>关于博主</h2>
+        <img src="/static/img/my.jpg" width="230" height="230" alt="博主"/>
+        <p>博主：XX</p>
+        <p>职业：web前端、视觉设计</p>
+        <p>简介：</p>
+        <p>
+            <a href="#" title="联系博主"><span class="left b_1"></span></a><a href="#" title="加入QQ群，一起学习！"><span class="left b_2"></span></a>
+        <div class="clear"></div>
+        </p>
+    </div>
+    <!--栏目分类-->
+    <div class="lanmubox">
+        <div class="hd">
+            <ul><li>精心推荐</li><li>最新文章</li><li class="hd_3">随机文章</li></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                {volist name="data" id="vo"}
+                <li><a href="{:Url('Me/leran','id='.jiami(($vo.id)))}" title="网站项目实战开发（-）">{$vo.title}</a></li>
+                {/volist}
+            </ul>
+        </div>
+    </div>
+    <!--end-->
+</div>
+</body>
+</html>
