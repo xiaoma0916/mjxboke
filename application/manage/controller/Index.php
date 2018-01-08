@@ -8,7 +8,7 @@
 
 namespace app\manage\controller;
 use think\Db;
-
+use think\Session;
 class Index extends Base{
      public function index()
      {
