@@ -241,8 +241,6 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
-<<<<<<< HEAD
-=======
     //定义404页面
     'http_exception_template'    =>  [
         // 定义404错误的重定向页面地址
@@ -251,5 +249,4 @@ return [
         401 =>  APP_PATH.'401.html',
     ],
     'empty_module'=>'Index',
->>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
 ];

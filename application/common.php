@@ -68,10 +68,8 @@ function isMobile()
         }
     }
     return false;
-<<<<<<< HEAD
-=======
+
 }
 function AdminUser(){
     return session('adminuser');
->>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
 }

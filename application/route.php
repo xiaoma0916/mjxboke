@@ -15,10 +15,7 @@ return [
     'view/[:id]$' => 'me/leran',//静态地址和动态地址结合
     'add' => '@manage/index/addarticle' , //后台首页添加文章
     'yan' => 'me/message',  //后台首页添加文章
-<<<<<<< HEAD
 	'manage'=>'@manage/index/index',//后台首页
-=======
->>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
     'ajax' =>'me/AjaxPhone',
 
 ];

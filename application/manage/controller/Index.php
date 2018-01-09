@@ -8,22 +8,11 @@
 
 namespace app\manage\controller;
 use think\Db;
-<<<<<<< HEAD
 use think\Session;
 use think\Cookie;
 class Index extends Base{
      public function index()
      {
-         if (session('amdinuser') == '') {
-             $this->error('请先登录','Login/Login');
-         }
-=======
-
-class Index extends Base{
-     public function index()
-     {
-
->>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
              $this->left();
              $this->right();
              return view();
@@ -96,9 +85,4 @@ class Index extends Base{
          }
 
     }
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
 }
