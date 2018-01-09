@@ -9,6 +9,7 @@
 namespace app\manage\controller;
 use think\Db;
 use think\Session;
+use think\Cookie;
 class Index extends Base{
      public function index()
      {
@@ -87,4 +88,6 @@ class Index extends Base{
          }
 
     }
+	
+	
 }
