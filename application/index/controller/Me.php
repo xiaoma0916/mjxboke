@@ -35,7 +35,13 @@ class Me extends  Base{
         $Mid = input('id');
         $idarray =explode(',',jiemi($Mid));
         $id = $idarray[1];
+<<<<<<< HEAD
         $data = Db::name('article')->where('id',$id)->find();
+=======
+        $datas = Db::name('article')->where('id',$id)->find();
+        $this->assign('datas',$datas);
+        $data = Db::name('article')->limit(5)->field('title,id')->select();
+>>>>>>> 2f64286bbe6170fd83b54098749650f05f480e56
         $this->assign('data',$data);
         return view();
     }
