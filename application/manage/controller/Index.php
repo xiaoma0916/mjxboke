@@ -13,10 +13,7 @@ use think\Cookie;
 class Index extends Base{
      public function index()
      {
-             $this->left();
-             $this->right();
-             return view();
-
+         return view();
      }
     public function left()
     {

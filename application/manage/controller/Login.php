@@ -19,7 +19,6 @@ class Login  extends Controller{
     public function LoginDo(){
        $username = input('name','','htmlspecialchars');
        $password = input('password','','htmlspecialchars');
-
        $logon = input('logon');
        if($data = Db::name('admin')->where(['username'=>$username])->find()){
                $rand = $data['randnum'];
@@ -43,6 +42,7 @@ class Login  extends Controller{
     }
     public function TuiChu(){
         Session::delete('adminuser');
+        Cookie::delete('bkamdinuser');
        // $this->success('退出成功','manage/Login/Login');
        //不想看到跳转页面
         $this->redirect(url('Login/Login'));

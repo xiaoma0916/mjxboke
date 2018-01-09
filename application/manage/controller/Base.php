@@ -13,7 +13,6 @@ use think\Db;
 class Base extends Controller{
     public function __construct()
     {
-      //  echo Cookie::get('bkamdinuser');die;
         if(Cookie::get('bkamdinuser'))
         {
             session('adminuser',Cookie::get('bkamdinuser'));
