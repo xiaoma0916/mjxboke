@@ -8,7 +8,6 @@
 
 namespace app\index\controller;
 use think\Db;
-use think\Session;
 class Me extends  Base{
      public function message(){
          $count = Db::name('message')->count();
@@ -25,7 +24,7 @@ class Me extends  Base{
         {
             $this->error('请先登录','Login/login');
         }else{
-            $content = input('content');
+
         }
 
 
@@ -64,7 +63,7 @@ class Me extends  Base{
         $Phone = input('phone','','htmlspecialchars');
         if(session('code'.$Phone) == $Code){
             //先调用归属地接口
-            $name =  phone_ascription();
+           // $name =  phone_ascription();
             //执行插入数据库操作 调用归属地接口
 
 
