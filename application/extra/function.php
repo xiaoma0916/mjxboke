@@ -2,14 +2,7 @@
 function hmtlentities_code($arr){
    return  html_entity_decode($arr,ENT_QUOTES ,'UTF-8');
 }
-function state_code($state){
-        if($state == 1)
-        {
-             return "正能量";
-        }else{
-            return  "学无止境";
-        }
-}
+
 function  jiami($num){
     $id = base64_encode('mjxbk,'.$num);
     return $id;
@@ -54,7 +47,8 @@ function cutstr_html($string,$length=0,$ellipsis='…'){
     return $string;
 }
 function substring($string){
-    return substr($string,0,200);
+    $string =  mb_substr($string,0,100);
+   return  $string . "....";
 }
 //手机短信接口
 function  Phone_verification($moblie=15832003493,$code){

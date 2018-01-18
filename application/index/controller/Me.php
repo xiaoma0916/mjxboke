@@ -8,6 +8,8 @@
 
 namespace app\index\controller;
 use think\Db;
+use app\index\model\Article;
+use think\Request;
 class Me extends  Base{
      public function message(){
          $count = Db::name('message')->count();
@@ -34,16 +36,17 @@ class Me extends  Base{
         $Mid = input('id');
         $idarray =explode(',',jiemi($Mid));
         $id = $idarray[1];
-        $datas = Db::name('article')->where('id',$id)->find();
+        $datas = Article::get($id);
         $this->assign('datas',$datas);
-        $data = Db::name('article')->limit(5)->field('title,id')->select();
+        $data = Article::scope('Title')->select();
         $this->assign('data',$data);
         return view();
     }
     public function index(){
         $count = Db::name('article')->where('state',1)->count();
         $data = Db::name('article')->where('state',1)->paginate(3,$count,[
-            'path'=>url('/index/me/index/','',false)."page/[PAGE].html"
+            //'path'=>url('/index/me/index/','',false)."page/[PAGE].html"
+             'path'=>"javascript:AjaxPage([PAGE])"
         ]);
         $page = $data->render();
         $this->assign('page',$page);
@@ -71,4 +74,5 @@ class Me extends  Base{
             echo 2;
         }
     }
+
 }

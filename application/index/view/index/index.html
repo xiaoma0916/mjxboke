@@ -27,10 +27,10 @@
                      <dl>
                          <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
                          <dd>
-                             <p class="dd_text_1">人生的轻松，就是能在这个喧嚣的尘世，不用献媚于谁，也不必跟谁说讨好的话，他玩他的，你活你的。两不相干，然后，两相安。你在意谁，在意到极致，就会活在这个人的阴影里...</p>
+                             <p class="dd_text_1">{$data.0.content|clearHtml|cutstr_html|substring}</p>
                              <p class="dd_text_2">
-                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
-                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.0.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.0.id)))}" title="阅读全文">阅读全文</a>
+                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime}</span>
+                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.0.state}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.0.id)))}" title="阅读全文">阅读全文</a>
                </span>
                              <div class="clear"></div>
                              </p>
@@ -44,11 +44,10 @@
                      <dl>
                          <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
                          <dd>
-                             <p class="dd_text_1">镜中人，相当于情人眼里的意中人。
-                                 谁不爱自己？谁不把自己作为最知心的人？谁不体贴自己、谅解自己？.....</p>
+                             <p class="dd_text_1">{$data.1.content|clearHtml|cutstr_html|substring}</p>
                              <p class="dd_text_2">
-                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
-                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.1.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.1.id)))}" title="阅读全文">阅读全文</a>
+                                 <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime}</span>
+                                 <span class="left fl">分类:<a href="#" title="学无止境">{$data.1.state}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.(jiami($data.1.id)))}" title="阅读全文">阅读全文</a>
                </span>
                              <div class="clear"></div>
                              </p>
@@ -63,10 +62,10 @@
                  <dl>
                      <dt><img src="/static/img/1.jpg" width="200" height="123" alt=""></dt>
                      <dd>
-                         <p class="dd_text_1">其实很多人在交往谈话的过程当中，总是会无意识中犯一些错误，而这些错误，也是影响到别人对你印象的关键，因此在与人谈话中，你必须改掉一些坏毛病。那么，与人交谈要注意哪些问题呢?.....</p>
+                         <p class="dd_text_1">{$data.2.content|clearHtml|cutstr_html|substring}</p>
                          <p class="dd_text_2">
-                             <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.1.addtime|date="Y-m-d",###}</span>
-                             <span class="left fl">分类:<a href="#" title="学无止境">{$data.2.state|state_code}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.jiami($data.2.id))}" title="阅读全文">阅读全文</a>
+                             <span class="left author">小巷青砖</span><span class="left sj">时间:{$data.2.addtime}</span>
+                             <span class="left fl">分类:<a href="#" title="学无止境">{$data.2.state}</a></span><span class="left yd"><a href="{:Url('Me/leran','id='.jiami($data.2.id))}" title="阅读全文">阅读全文</a>
                </span>
                          <div class="clear"></div>
                          </p>

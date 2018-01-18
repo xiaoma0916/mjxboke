@@ -18,6 +18,7 @@ return [
 	//'manage'=>'@manage/Index/index',//后台首页
     'add' => '@manage/index/addarticle' , //后台首页添加文章
     'login' => '@manage/Login/Login',
+    'ajaxpage'=>"@index/Me/AjaxPage",
 
 
 ];
